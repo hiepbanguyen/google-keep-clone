@@ -1,12 +1,14 @@
 import React, {useState} from "react";
-import AddNote from "./components/AddNote";
-import NoteList from "./components/NoteList";
+import CreateNoteCard from "./components/CreateNoteCard";
+import CardGrid from "./components/CardGrid";
 
 function App() {
   const data = [
     { id: 1, title: 'Note1', content: 'floppydiskfette' },
     { id: 2, title: 'Note2', content: 'siliconeffsidolon' },
     { id: 3, title: 'Note3', content: 'benisfwefwefphere' },
+    { id: 4, title: 'Note3', content: 'benisfwefwefphere' },
+    { id: 5, title: 'Note3', content: 'benisfwefwefphere' },
   ]
   const [notes, setNotes] = useState(data);
 
@@ -35,10 +37,9 @@ function App() {
 
   return (
       <div className="container">
-        <h1>Google Keep Clone</h1>
-        <AddNote addNote={addNote}/>
+        <CreateNoteCard addNote={addNote}/>
         <div className="flex-row">
-          <NoteList notes={notes} deleteNote={deleteNote}/>
+          <CardGrid notes={notes} deleteNote={deleteNote}/>
         </div>
       </div>
   );
