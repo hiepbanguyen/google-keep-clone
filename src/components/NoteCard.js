@@ -7,12 +7,12 @@ import { Typography } from "@mui/material";
 
 const NoteCard = (props) => {
 	return (
-		<Card variant="outlined" sx={{ minWidth: 275 }}>
+		<Card variant="outlined" sx={{ minWidth: 200, borderWidth: 2 }}>
 			<CardContent>
 				<Typography sx={{fontWeight: "bold"}}>
 					{props.note.title}
 				</Typography>
-				<Typography sx={{ margin: "auto" }} color="text.secondary">
+				<Typography sx={{ margin: "auto", color: "black", fontSize: "15px" }} color="text.secondary">
 					{props.note.content}
 				</Typography>
 			</CardContent>
