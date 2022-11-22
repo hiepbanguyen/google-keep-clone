@@ -9,7 +9,7 @@ const CardGrid = (props) => {
 				{props.notes.length > 0 ? (
 					props.notes.map(note => (
 						<Grid item xs>
-							<NoteCard note={note} deleteNote={props.deleteNote}/>
+							<NoteCard key={note.id} note={note} deleteNote={props.deleteNote} editNote={props.editNote}/>
 						</Grid>
 						// <div key={note.id} className="flex-small">
 						// 	<span>{note.title}</span>
@@ -23,7 +23,7 @@ const CardGrid = (props) => {
 						// </div>
 					))
 				) : (
-					<div aria-colspan={3}>No notes</div>
+					<div></div>
 				)}
 			</Grid>
 		</Box>

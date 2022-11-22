@@ -29,7 +29,7 @@ const CreateNoteCard = (props) => {
 				</div>
 			</CardContent>
 			<CardActions>
-				<Button size="small" sx={{ mr: 1, ml: "auto", backgroundColor: "black"}} onClick={handleAddNote} variant="contained" endIcon={<AddIcon />}>Save</Button>
+				<Button size="small" sx={{ mr: 1, ml: "auto", backgroundColor: "black"}} onClick={handleAddNote} variant="contained" endIcon={<AddIcon />}>Add</Button>
 			</CardActions>
 		</Card>
 	);
