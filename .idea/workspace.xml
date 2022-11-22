@@ -4,13 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f1be464b-a935-42f8-9014-c427bc7fb066" name="Changes" comment="add delete, edit feature">
-      <change afterPath="$PROJECT_DIR$/src/components/AppBarMenu.js" afterDir="false" />
+    <list default="true" id="f1be464b-a935-42f8-9014-c427bc7fb066" name="Changes" comment="add search feature">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/AppBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/AppBar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/CreateNoteCard.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/CreateNoteCard.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/NoteCard.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/NoteCard.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,7 +64,7 @@
       <workItem from="1664159662476" duration="18000" />
       <workItem from="1668108736619" duration="6481000" />
       <workItem from="1668757565713" duration="16601000" />
-      <workItem from="1669015837160" duration="26554000" />
+      <workItem from="1669015837160" duration="30918000" />
     </task>
     <task id="LOCAL-00001" summary="commit">
       <created>1668774714810</created>
@@ -105,7 +101,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669106634920</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="add search feature">
+      <created>1669115980296</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1669115980296</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -128,6 +131,7 @@
     <MESSAGE value="add mui" />
     <MESSAGE value="add appbar" />
     <MESSAGE value="add delete, edit feature" />
-    <option name="LAST_COMMIT_MESSAGE" value="add delete, edit feature" />
+    <MESSAGE value="add search feature" />
+    <option name="LAST_COMMIT_MESSAGE" value="add search feature" />
   </component>
 </project>
