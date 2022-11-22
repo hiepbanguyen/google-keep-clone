@@ -15,6 +15,7 @@ import AccountCircle from '@mui/icons-material/AccountCircle';
 import RefreshIcon from '@mui/icons-material/Refresh';
 import SettingsIcon from '@mui/icons-material/Settings';
 import MoreIcon from '@mui/icons-material/MoreVert';
+import AppBarMenu from "./AppBarMenu";
 
 const Search = styled('div')(({ theme }) => ({
 	position: 'relative',
@@ -56,7 +57,7 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
 	},
 }));
 
-export default function PrimarySearchAppBar() {
+export default function PrimarySearchAppBar(props) {
 	const [anchorEl, setAnchorEl] = React.useState(null);
 	const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = React.useState(null);
 
@@ -79,6 +80,11 @@ export default function PrimarySearchAppBar() {
 	const handleMobileMenuOpen = (event) => {
 		setMobileMoreAnchorEl(event.currentTarget);
 	};
+
+	const handleSearchChange = (e) => {
+		const { value } = e.target;
+		props.searchNotes(value);
+	}
 
 	const menuId = 'primary-search-account-menu';
 	const renderMenu = (
@@ -157,15 +163,7 @@ export default function PrimarySearchAppBar() {
 		<Box sx={{ flexGrow: 1 }}>
 			<AppBar position="fixed" sx={{backgroundColor: "black"}}>
 				<Toolbar>
-					<IconButton
-						size="large"
-						edge="start"
-						color="inherit"
-						aria-label="open drawer"
-						sx={{ mr: 2 }}
-					>
-						<MenuIcon />
-					</IconButton>
+					<AppBarMenu/>
 					<Typography
 						variant="h6"
 						noWrap
@@ -181,6 +179,7 @@ export default function PrimarySearchAppBar() {
 						<StyledInputBase
 							placeholder="Search…"
 							inputProps={{ 'aria-label': 'search' }}
+							onChange={handleSearchChange}
 						/>
 					</Search>
 					<Box sx={{ flexGrow: 1 }} />

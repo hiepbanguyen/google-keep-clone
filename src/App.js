@@ -1,7 +1,7 @@
 import React, {useState} from "react";
 import CreateNoteCard from "./components/CreateNoteCard";
 import CardGrid from "./components/CardGrid";
-import AppBar from "./components/AppBar.js";
+import PrimarySearchAppBar from "./components/AppBar.js";
 
 function App() {
   const data = [
@@ -12,8 +12,8 @@ function App() {
   const [notes, setNotes] = useState(data);
 
   const addNote = (note) => {
-    note.id = notes.length + 1;
-    setNotes(notes.concat(note));
+    const newNote = { ...note, id: notes.length + 1}
+    setNotes(notes.concat(newNote));
   }
 
   const deleteNote = (id) => {
@@ -23,6 +23,19 @@ function App() {
   const editNote = (id, editedNote) => {
     // setEditing(false);
     setNotes(notes.map((note) => (note.id === id ? editedNote : note)))
+  }
+
+  const searchNotes = (keyword) => {
+    if (keyword) {
+      const notesContainKeyword = [];
+      for (const i of data) {
+        const pool = i.content.concat(i.title).toLowerCase();
+        if (pool.includes(keyword.toLowerCase())) {
+          notesContainKeyword.push(i);
+        }
+      }
+      setNotes(notesContainKeyword);
+    }
   }
   //
   // const [editing, setEditing] = useState(false)
@@ -36,7 +49,7 @@ function App() {
 
   return (
       <div className="container">
-        <AppBar />
+        <PrimarySearchAppBar searchNotes={searchNotes}/>
         <CreateNoteCard addNote={addNote}/>
         <div className="flex-row">
           <CardGrid notes={notes} deleteNote={deleteNote} editNote={editNote}/>
