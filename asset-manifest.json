@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.js": "/google-keep-clone/static/js/main.88b31cae.js",
+    "main.js": "/google-keep-clone/static/js/main.312529f5.js",
     "index.html": "/google-keep-clone/index.html",
-    "main.88b31cae.js.map": "/google-keep-clone/static/js/main.88b31cae.js.map"
+    "main.312529f5.js.map": "/google-keep-clone/static/js/main.312529f5.js.map"
   },
   "entrypoints": [
-    "static/js/main.88b31cae.js"
+    "static/js/main.312529f5.js"
   ]
 }
